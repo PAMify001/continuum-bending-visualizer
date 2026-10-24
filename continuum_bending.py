@@ -25,7 +25,7 @@ def continuum_robot(lengths, curvatures):
 
 lengths = [2.0, 2.0, 2.0]
 
-# ---------- Part 1: three example shapes ----------
+# Part 1: three example shapes
 configs = {
     "Straight": [0.0, 0.0, 0.0],
     "Gentle C-bend": [0.2, 0.2, 0.2],
