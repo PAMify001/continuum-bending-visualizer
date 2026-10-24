@@ -68,7 +68,7 @@ for sigma, color in [(0.01, "tab:green"), (0.03, "tab:red")]:
     err = np.linalg.norm(tips - tip_nom, axis=1)   # distance of each tip from the nominal tip
     print(f"curvature error std {sigma}: mean tip error {err.mean():.3f}, "
           f"95th percentile {np.percentile(err, 95):.3f}")
-    plt.scatter(tips[:, 0], tips[:, 1], s=10, alpha=0.5, color=color,
+    plt.scatter(tips[:, 0], tips[:, 1], s=10, alpha=0.5, color=color, zorder=3 if sigma == 0.01 else 2,
                 label=f"Tip positions (curvature error std {sigma})")
 plt.axis("equal")
 plt.legend()
